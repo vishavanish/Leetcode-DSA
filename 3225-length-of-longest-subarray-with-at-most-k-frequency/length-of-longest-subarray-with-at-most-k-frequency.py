@@ -10,12 +10,10 @@ class Solution:
         for right in range(len(nums)):
             freq[nums[right]] += 1
 
-            # Shrink window if frequency exceeds k
             while freq[nums[right]] > k:
                 freq[nums[left]] -= 1
                 left += 1
 
-            # Current window is valid
             ans = max(ans, right - left + 1)
 
         return ans
