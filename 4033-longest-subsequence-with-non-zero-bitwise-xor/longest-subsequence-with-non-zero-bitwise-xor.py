@@ -1,8 +1,6 @@
 class Solution:
     def longestSubsequence(self, nums: List[int]) -> int:
-        xor = 0
-        has_non_zero = False
-        #llop 
+        xor , has_non_zero= 0, False
         for num in nums:
             xor ^= num
             if num != 0:
