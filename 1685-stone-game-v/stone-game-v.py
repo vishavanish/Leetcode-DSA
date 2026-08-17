@@ -4,7 +4,6 @@ class Solution:
     def stoneGameV(self, stoneValue):
         n = len(stoneValue)
 
-        # Prefix sum
         prefix = [0] * (n + 1)
 
         for i in range(n):
@@ -27,11 +26,6 @@ class Solution:
 
                 # Left side is smaller.
                 if left_sum < right_sum:
-
-                    # Even if we could get left_sum again,
-                    # maximum possible = 2 * left_sum.
-                    #
-                    # If that cannot beat ans, skip this split.
                     if ans >= 2 * left_sum:
                         continue
 
@@ -40,17 +34,7 @@ class Solution:
                         left_sum + dfs(l, k)
                     )
 
-                # Right side is smaller.
                 elif left_sum > right_sum:
-
-                    # As k moves right:
-                    # left_sum increases
-                    # right_sum decreases
-                    #
-                    # So future right_sum will only become smaller.
-                    #
-                    # If even 2 * right_sum can't beat ans,
-                    # we can stop completely.
                     if ans >= 2 * right_sum:
                         break
 
@@ -59,7 +43,6 @@ class Solution:
                         right_sum + dfs(k + 1, r)
                     )
 
-                # Equal
                 else:
                     ans = max(
                         ans,
