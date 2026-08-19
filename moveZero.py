@@ -9,7 +9,7 @@ def moveZero(nums):
     
     print(nums)
 
-nums = [0, 1, 0, 3, 0]
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
 moveZero(nums)
 
 #==============================================================
