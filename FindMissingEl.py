@@ -10,7 +10,7 @@ class missing:
 
         return val
 
-nums = [1,3,6]
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
 obj = missing()
 print(obj.findMissing(nums))
 
