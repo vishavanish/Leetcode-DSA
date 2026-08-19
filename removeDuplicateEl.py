@@ -12,7 +12,7 @@ class unique:
         del nums[j:]
         return nums
 
-nums = [1,3,6,3,7,7,1,2,8]
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
 obj = unique()
 print(obj.removeDuplicate(nums))
 
