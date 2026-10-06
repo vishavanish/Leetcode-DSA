@@ -4,7 +4,6 @@ class Solution:
       
         for char in s:
             if char == ')' and stack and stack[-1] == '(':
-                # Remove the matched opening parenthesis
                 stack.pop()
             else:
                 stack.append(char)
