@@ -2,17 +2,7 @@ class Solution:
     def removeInvalidParentheses(self, s: str) -> List[str]:
         def dfs(index: int, left_to_remove: int, right_to_remove: int, 
                 left_count: int, right_count: int, current_string: str) -> None:
-            """
-            Recursively explore all possible ways to remove invalid parentheses.
-          
-            Args:
-                index: Current position in the original string
-                left_to_remove: Number of '(' that still need to be removed
-                right_to_remove: Number of ')' that still need to be removed
-                left_count: Count of '(' in the current valid string being built
-                right_count: Count of ')' in the current valid string being built
-                current_string: The string being constructed
-            """
+            
             if index == string_length:
                 if left_to_remove == 0 and right_to_remove == 0:
                     valid_results.add(current_string)
