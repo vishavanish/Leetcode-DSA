@@ -13,7 +13,6 @@ class Solution:
                 right_count: Count of ')' in the current valid string being built
                 current_string: The string being constructed
             """
-            # Base case: reached end of string
             if index == string_length:
                 if left_to_remove == 0 and right_to_remove == 0:
                     valid_results.add(current_string)
