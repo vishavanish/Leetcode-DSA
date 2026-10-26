@@ -2,7 +2,7 @@ class Solution:
     def removeOuterParentheses(self, s: str) -> str:
         result = []
         depth = 0  
-      
+      ## loop for the find the first opeining 
         for char in s:
             if char == '(':
                 
