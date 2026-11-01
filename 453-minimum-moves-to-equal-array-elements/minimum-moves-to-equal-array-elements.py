@@ -9,4 +9,5 @@ class Solution:
       
         # The number of moves equals the total difference from minimum
         # This is equivalent to: sum of (each element - min_value)
+        
         return total_sum - min_value * len(nums)
