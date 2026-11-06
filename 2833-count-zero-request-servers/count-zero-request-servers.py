@@ -20,8 +20,6 @@ class Solution:
         left_pointer = 0   # Points to the start of the current window
         right_pointer = 0  # Points to the end of the current window
       
-        # Process queries in sorted order while maintaining original indices
-        # zip(queries, count()) pairs each query with its original index
         for query_time, original_index in sorted(zip(queries, count())):
             # Calculate window boundaries
             window_start = query_time - x
