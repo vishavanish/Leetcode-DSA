@@ -12,5 +12,4 @@ class Solution:
             + (need2 - min_need) * cost2
         )
 
-        # Return the cheapest of the three strategies.
         return min(buy_individually, buy_only_bundles, buy_mixed)
