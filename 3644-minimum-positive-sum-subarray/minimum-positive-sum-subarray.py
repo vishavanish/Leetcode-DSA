@@ -1,5 +1,6 @@
 class Solution:
   def minimumSumSubarray(self, nums: list[int], l: int, r: int) -> int:
+    
     ans = math.inf
 
     for windowSize in range(l, r + 1):
